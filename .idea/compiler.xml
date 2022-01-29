@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="BaseMVVMMultiModule.app" target="11" />
+      <module name="BaseMVVMMultiModule.data.cache" target="11" />
+      <module name="BaseMVVMMultiModule.data.network" target="11" />
+      <module name="BaseMVVMMultiModule.data.repository" target="11" />
+      <module name="BaseMVVMMultiModule.feature.favourite" target="11" />
+      <module name="BaseMVVMMultiModule.presentation.search" target="11" />
+      <module name="BaseMVVMMultiModule.presentation.settings" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.dynamic-feature'
+    id 'kotlin-android'
+}
+android {
+    compileSdk = rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.baseproject.search"
+        minSdk  rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api appDependencies.androidCore
+    api appDependencies.appCompat
+    api appDependencies.materialDesign
+    api appDependencies.constraintLayout
+    api appDependencies.legacySupport
+
+    api appDependencies.navigationFragment
+    api appDependencies.navigationUI
+    api appDependencies.navigationDynamicFeatures
+
+    testImplementation testDependencies.jUnit
+    androidTestImplementation testDependencies.androidJUnit
+    androidTestImplementation testDependencies.androidEspresso
+    androidTestImplementation testDependencies.androidAnnotation
+}

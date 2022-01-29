@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/searchNewsFragment">
+
+<!--    android:label="fragment_search_news"-->
+    <include-dynamic
+        android:id="@+id/searchNewsFragment"
+        android:name="com.baseproject.search"
+        app:moduleName="@string/search_module_name"
+       android:label="@string/title_search"
+        app:graphResName="search_nav"
+         />
+
+    <include-dynamic
+        android:id="@+id/settingsFragment"
+        android:name="com.baseproject.settings"
+        app:moduleName="@string/settings_module_name"
+        android:label="@string/title_settings"
+        app:graphResName="settings_nav"
+        />
+<!--    <include-dynamic-->
+<!--        android:id="@+id/favouriteNewsFragment"-->
+<!--        android:name="com.baseproject.favourite"-->
+<!--        app:moduleName="@string/title_favourite"-->
+<!--        android:label="fragment_search_news"-->
+<!--        app:graphResName="home_fav"-->
+<!--        />-->
+</navigation>

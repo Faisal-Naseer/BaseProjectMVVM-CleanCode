@@ -1,0 +1,75 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdk = rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.baseproject.basemvvmmultimodule"
+        minSdk  rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+//    signingConfigs {
+//        release {
+//            keyAlias "key0"
+//            keyPassword "mementomori"
+//            storeFile file("./base_proj.jks")
+//            storePassword "mementomori"
+//        }
+//    }
+//
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+//        }
+//
+//        debug {
+//            minifyEnabled false
+//            //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//        }
+//
+//    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dynamicFeatures = [':presentation:search', ':feature:favourite',':presentation:settings']
+}
+
+dependencies {
+
+    api project(path: ':data:repository')
+
+    api appDependencies.androidCore
+    api appDependencies.appCompat
+    api appDependencies.materialDesign
+    api appDependencies.constraintLayout
+
+
+    api appDependencies.navigationFragment
+    api appDependencies.navigationUI
+    api appDependencies.navigationDynamicFeatures
+
+
+
+    testImplementation testDependencies.jUnit
+    androidTestImplementation testDependencies.androidJUnit
+    androidTestImplementation testDependencies.androidEspresso
+}
