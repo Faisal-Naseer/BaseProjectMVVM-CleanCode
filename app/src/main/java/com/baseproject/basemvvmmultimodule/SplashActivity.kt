@@ -5,15 +5,21 @@ import android.os.Bundle
 import androidx.core.content.IntentCompat
 
 import android.content.Intent
-
-
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.delay
 
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
-        gotoHomeActivity()
+        splashScreen.setKeepOnScreenCondition { true }
+        lifecycleScope.launchWhenCreated {
+            delay(2000)
+            gotoHomeActivity()
+        }
+
     }
 
     private fun gotoHomeActivity() {

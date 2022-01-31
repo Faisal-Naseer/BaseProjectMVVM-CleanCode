@@ -25,18 +25,18 @@ android {
 
 dependencies {
     implementation project(":app")
-    api appDependencies.androidCore
-    api appDependencies.appCompat
-    api appDependencies.materialDesign
-    api appDependencies.constraintLayout
-    api appDependencies.legacySupport
-
-    api appDependencies.navigationFragment
-    api appDependencies.navigationUI
-    api appDependencies.navigationDynamicFeatures
-
-    testImplementation testDependencies.jUnit
-    androidTestImplementation testDependencies.androidJUnit
-    androidTestImplementation testDependencies.androidEspresso
-    androidTestImplementation testDependencies.androidAnnotation
+//    api appDependencies.androidCore
+//    api appDependencies.appCompat
+//    api appDependencies.materialDesign
+//    api appDependencies.constraintLayout
+//    api appDependencies.legacySupport
+//
+//    api appDependencies.navigationFragment
+//    api appDependencies.navigationUI
+//    api appDependencies.navigationDynamicFeatures
+//
+//    testImplementation testDependencies.jUnit
+//    androidTestImplementation testDependencies.androidJUnit
+//    androidTestImplementation testDependencies.androidEspresso
+//    androidTestImplementation testDependencies.androidAnnotation
 }

@@ -26,15 +26,15 @@ dependencies {
     implementation project(":app")
     api project(path: ':data:cache')
 
-    api appDependencies.androidCore
-    implementation appDependencies.appCompat
-    implementation appDependencies.materialDesign
-    implementation appDependencies.constraintLayout
-    implementation appDependencies.legacySupport
-
-
-    testImplementation testDependencies.jUnit
-    androidTestImplementation testDependencies.androidJUnit
-    androidTestImplementation testDependencies.androidEspresso
-    androidTestImplementation testDependencies.androidAnnotation
+//    api appDependencies.androidCore
+//    implementation appDependencies.appCompat
+//    implementation appDependencies.materialDesign
+//    implementation appDependencies.constraintLayout
+//    implementation appDependencies.legacySupport
+//
+//
+//    testImplementation testDependencies.jUnit
+//    androidTestImplementation testDependencies.androidJUnit
+//    androidTestImplementation testDependencies.androidEspresso
+//    androidTestImplementation testDependencies.androidAnnotation
 }

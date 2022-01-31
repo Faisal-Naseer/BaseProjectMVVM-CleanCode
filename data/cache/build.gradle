@@ -32,11 +32,11 @@ android {
 
 dependencies {
 
-    api appDependencies.androidCore
-    api appDependencies.appCompat
-
-    testImplementation testDependencies.jUnit
-    androidTestImplementation testDependencies.androidJUnit
-    androidTestImplementation testDependencies.androidEspresso
-    androidTestImplementation testDependencies.androidAnnotation
+//    api appDependencies.androidCore
+//    api appDependencies.appCompat
+//
+//    testImplementation testDependencies.jUnit
+//    androidTestImplementation testDependencies.androidJUnit
+//    androidTestImplementation testDependencies.androidEspresso
+//    androidTestImplementation testDependencies.androidAnnotation
 }

@@ -67,6 +67,8 @@ dependencies {
     api appDependencies.navigationUI
     api appDependencies.navigationDynamicFeatures
 
+    implementation appDependencies.splashScreenApi
+
 
 
     testImplementation testDependencies.jUnit
